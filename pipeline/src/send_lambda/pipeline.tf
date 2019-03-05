@@ -1,6 +1,10 @@
 resource "aws_s3_bucket" "artifacts" {
   bucket = "prm-${data.aws_caller_identity.current.account_id}-send-lambda-pipeline-artifacts-${var.environment}"
   acl    = "private"
+
+  versioning {
+    enabled = true
+  }
 }
 
 # Role to use for running pipeline
