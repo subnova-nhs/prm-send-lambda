@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "lambda" {
 }
 
 resource "aws_s3_bucket_object" "lambda" {
-  bucket = "${aws_s3_bucket.lambda.lambda.bucket}"
+  bucket = "${aws_s3_bucket.lambda.bucket}"
   key    = "lambda.zip"
   source = "${path.module}/${var.lambda_zip}"
   etag   = "${md5(file("${path.module}/${var.lambda_zip}"))}"
