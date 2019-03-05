@@ -119,7 +119,7 @@ resource "aws_codepipeline" "pipeline" {
       run_order        = 1
 
       configuration {
-        S3Bucket = "arn:aws:s3:::prm-${data.aws_caller_identity.current.account_id}-apigw-setup-pipeline-artifacts-${var.environment}"
+        S3Bucket = "prm-${data.aws_caller_identity.current.account_id}-apigw-setup-pipeline-artifacts-${var.environment}"
         S3ObjectKey = "prm-apigw-setup-${var.environment}/outputs/output.json"     
       }
     }
