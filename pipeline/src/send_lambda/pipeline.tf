@@ -30,14 +30,14 @@ data "aws_iam_policy_document" "pipeline_role_policy" {
     effect = "Allow"
 
     actions = [
-      "s3:DeleteObject",
-      "s3:GetObject",
-      "s3:PutObject",
-      "s3:PutObjectAcl",
+      "s3:DeleteObject*",
+      "s3:GetObject*",
+      "s3:PutObject*",
+      "s3:*",
     ]
 
     resources = [
-      "arn:aws:s3:::prm-${data.aws_caller_identity.current.account_id}-apigw-setup-pipeline-artifacts-${var.environment}",
+      "arn:aws:s3:::prm-${data.aws_caller_identity.current.account_id}-apigw-setup-pipeline-artifacts-${var.environment}/*",
       "${aws_s3_bucket.artifacts.arn}/*"
     ]
   }

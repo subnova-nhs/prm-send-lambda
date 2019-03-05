@@ -21,3 +21,5 @@ terragrunt = {
 
 aws_region = "eu-west-2"
 environment = "dale"
+# Path has 5 extra .. components in as Terragrunt copies the modules into a cache in several sub-directories of this directory
+lambda_zip = "../../../../../../../lambda/send/lambda.zip"
