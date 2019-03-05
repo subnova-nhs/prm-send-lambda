@@ -1,0 +1,21 @@
+{
+  "name": "ehr_extract_handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk-mock": "^4.3.0",
+    "jest": "^24.1.0",
+    "sinon": "^7.2.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.381.0",
+    "html-entities": "^1.2.1",
+    "xml-js": "^1.6.9"
+  }
+}
